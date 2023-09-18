@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom/client'
   
 // ReactDOM.render(element, document.getElementById('root'));
   
-  ReactDOM.createRoot(document.getElementById('root')).render(
+  ReactDOM.createRoot(document.getElementById('root')).render( 
   element
 )
   
