@@ -27,6 +27,11 @@ class Clock extends React.Component{
         this.setState({
             date: new Date() //this.sate.date = new Date() *** never do that because it is not changing your state reactively
         })
+
+        /* another way */
+        // this.setState((state, props) => {
+
+        // })
     }
 
     render() {
