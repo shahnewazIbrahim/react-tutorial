@@ -15,11 +15,11 @@ import ReactDOM from 'react-dom/client';
 // }
 
 class Clock extends React.Component{
-  print() {
+  render() {
     return (
       <h1 className='heading'>
         <span>
-          Hello {new Date().toLocaleTimeString()}
+          Hello- {this.props.children} {new Date().toLocaleTimeString(this.props.locale)}
         </span>
       </h1>
     );
@@ -28,9 +28,13 @@ class Clock extends React.Component{
   
 // ReactDOM.render(<Clock/>, document.getElementById('root'));
 
-const clockComponent = new Clock();
+// const clockComponent = new Clock();
   
 ReactDOM
   .createRoot(document.getElementById('root'))
-  .render(clockComponent.print())
+  .render(
+    <Clock locale="bn-BD">
+      test
+    </Clock>
+  )
   
