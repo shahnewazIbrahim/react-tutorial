@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Clock extends React.Component{
-    // state define shorthand way //
+    // state define shorthand way // 
     state = {
         date : new Date()
     };
