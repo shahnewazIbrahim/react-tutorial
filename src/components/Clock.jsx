@@ -1,12 +1,14 @@
 import React from 'react';
+import Button from './Button.jsx';
 
 class Clock extends React.Component{
-    // state define shorthand way // 
+    /*state define shorthand way */ 
     state = {
-        date : new Date()
+        date: new Date(),
+        locale: 'bn-BD'
     };
     
-    // state define constructor way //
+    /* state define constructor way */
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -34,13 +36,29 @@ class Clock extends React.Component{
         // })
     }
 
+    handleClick= (locale) =>{
+        this.setState({
+            locale: locale
+        })
+    }
+
     render() {
+        console.log("clock component rendered");
+        const { date, locale } = this.state;
         return (
-            <h1 className='heading'>
-                <span>
-                Hello- {this.props.children} {this.state.date.toLocaleTimeString(this.props.locale)}
-                </span>
-            </h1>
+            <div>
+                <h1 className='heading'>
+                    <span>
+                    Hello- {this.props.children} {date.toLocaleTimeString(locale)}
+                    </span>
+                </h1>
+                
+                <Button change={this.handleClick.bind(this, 'en-US')}
+                >
+                    Click
+                </Button>
+            </div>
+            
         );
     }
 }
