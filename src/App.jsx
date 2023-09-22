@@ -1,11 +1,12 @@
-import Clock from "./components/Clock.jsx"
+// import ClockList from "./components/ClockList.jsx"
+import Form from "./components/Form.jsx"
 
 function App() {
-  console.log("app component rendered");
-
+  // const quantities = [1, 2, 3];
   return (
     <div>
-      <Clock locale="bn-BD"/>
+      {/* <ClockList quantities={quantities} /> */}
+      <Form/>
     </div>
   )
 
